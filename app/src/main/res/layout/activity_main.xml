@@ -6,7 +6,7 @@
     <data>
 
         <variable
-            name="number"
+            name="viewModel"
             type="com.suret.calculatordatabinding.viewmodel.CalculatorViewModel" />
 
     </data>
@@ -47,7 +47,7 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="30dp"
             android:padding="10dp"
-            android:text="@{String.valueOf(number.answer)}"
+            android:text="@{String.valueOf(viewModel.answer)}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:onClick="@{(view)->number.plus(firstNumber.getText().toString(),secondNumber.getText().toString())}"
+                android:onClick="@{(view)->viewModel.plus(firstNumber.getText().toString(),secondNumber.getText().toString())}"
                 android:text="+" />
 
             <Button
@@ -77,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:onClick="@{(view)->number.minus(firstNumber.getText().toString(),secondNumber.getText().toString())}"
+                android:onClick="@{(view)->viewModel.minus(firstNumber.getText().toString(),secondNumber.getText().toString())}"
                 android:text="-" />
 
             <Button
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:onClick="@{(view)->number.divide(firstNumber.getText().toString(),secondNumber.getText().toString())}"
+                android:onClick="@{(view)->viewModel.divide(firstNumber.getText().toString(),secondNumber.getText().toString())}"
                 android:text="/" />
 
             <Button
@@ -93,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:onClick="@{(view)->number.multiply(firstNumber.getText().toString(),secondNumber.getText().toString())}"
+                android:onClick="@{(view)->viewModel.multiply(firstNumber.getText().toString(),secondNumber.getText().toString())}"
                 android:text="*" />
         </LinearLayout>
 

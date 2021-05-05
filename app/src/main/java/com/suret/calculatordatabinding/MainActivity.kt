@@ -9,15 +9,15 @@ import com.suret.calculatordatabinding.viewmodel.CalculatorViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var dataBinding: ActivityMainBinding
-    lateinit var calcViewModel: CalculatorViewModel
+    lateinit var viewModel: CalculatorViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        calcViewModel = ViewModelProvider(this).get(CalculatorViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(CalculatorViewModel::class.java)
 
         dataBinding.lifecycleOwner = this
-        dataBinding.number = calcViewModel
+        dataBinding.viewModel = viewModel
 
 
     }
